@@ -1,0 +1,15 @@
+.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.errorImg {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+    /* color: blueviolet; */
+}

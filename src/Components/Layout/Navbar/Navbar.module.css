@@ -1,0 +1,605 @@
+.navbarStore {
+    background-color: #fff;
+    min-height: 80px;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.storeLogo {
+    padding-left: 50px;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #19191d;
+    text-decoration: none;
+}
+
+.storeLogo:hover {
+    color: rgb(76, 74, 74);
+}
+
+.navLinksStore {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.navLinkStore {
+    position: relative;
+    text-decoration: none;
+    color: #3e3e46;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navLinkStore:hover,
+.active {
+    color: black;
+}
+
+/* Buttons */
+.navActions {
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navIconBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    color: #19191d;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navIconBtn:hover {
+    color: #8b693d;
+}
+
+.registerBtn {
+    padding: 5px;
+    font-size: 26px;
+}
+
+.cartBadge {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    width: 13px;
+    height: 13px;
+    background-color: #171717;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.cartOverlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 3000;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.cartDrawer {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 280px;
+    max-width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.12);
+    animation: slideInCart 0.25s ease;
+}
+
+@keyframes slideInCart {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.cartHeader {
+    padding: 18px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.cartHeader h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cartHeader h5 span {
+    margin-left: 10px;
+    padding: 5px 8px;
+    border-radius: 12px;
+    background: #f2f2f2;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.closeCart {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    color: #515154;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.closeCart:hover {
+    color: #d33;
+}
+
+.cartBody {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 8px 16px;
+}
+
+.cartItem {
+    display: flex;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.cartItem img {
+    width: 70px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #f5f3ef;
+}
+
+.cartItemInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.cartItemInfo h6 {
+    margin: 2px 0 6px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cartItemInfo p {
+    margin-bottom: 9px;
+    color: #7c7a7a;
+    font-size: 11px;
+}
+
+.cartItemRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cartItemRight strong {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.quantityControls {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.quantityControls button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.quantityControls span {
+    font-size: 10px;
+}
+
+.removeItem {
+    border: 0;
+    background: transparent;
+    color: #d33;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.cartFooter {
+    padding: 16px;
+    border-top: 1px solid #eee;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.continueShopping {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: rgb(250, 250, 250);
+    color: #222;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.continueShopping:hover {
+    background: #19191d;
+    color: #fff;
+    border-color: #fff;
+}
+
+.menuToggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #19191d;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menuOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2000;
+}
+
+.sideMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    max-width: 85%;
+    height: 100%;
+    background: #fff;
+    padding: 25px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    animation: slideMenuIn 0.3s ease;
+}
+
+.sideMenuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dedbdb;
+}
+
+.sideMenuHeader h5 {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.closeMenu {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    color: #777;
+    cursor: pointer;
+}
+
+.closeMenu:hover {
+    color: #b58a50;
+}
+
+.sideMenuLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.sideMenuLinks a {
+    text-decoration: none;
+    color: #19191d;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.sideMenuLinks a:hover,
+.sideMenuLinks a.active {
+    color: #b58a50;
+}
+
+@keyframes slideMenuIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* Small Laptops  */
+@media (max-width: 1200px) {
+    .navbarStore {
+        margin: 0 20px;
+    }
+
+    .navLinksStore {
+        gap: 25px;
+    }
+
+    .navLinkStore {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .navActions {
+        gap: 15px;
+    }
+
+    .storeLogo {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+}
+
+/* Tablets S & L*/
+@media (max-width: 992px) {
+    .navbarStore {
+        margin: 0 15px;
+    }
+
+    .navLinksStore {
+        gap: 15px;
+    }
+
+    .navLinkStore {
+        font-size: 13px;
+        letter-spacing: 0.5px;
+    }
+
+    .navActions {
+        gap: 12px;
+    }
+
+    .storeLogo {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbarStore {
+        margin: 0 10px;
+    }
+
+    .navbarStore :global(.container-fluid) {
+        gap: 10px;
+    }
+
+    .navLinksStore {
+        gap: 10px;
+    }
+
+    .navLinkStore {
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+
+    .navActions {
+        gap: 8px;
+    }
+
+    .storeLogo {
+        font-size: 18px;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* Mobilee S & L */
+@media (max-width: 551px) {
+    .navbarStore {
+        height: 75px;
+        margin: 0;
+    }
+
+    .navbarStore :global(.container-fluid) {
+        flex-wrap: nowrap;
+        gap: clamp(5px, 1.6vw, 12px);
+        padding: 0 !important;
+    }
+
+    .menuToggle {
+        display: block;
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+
+    .navLinksStore {
+        display: none;
+    }
+
+    .storeLogo {
+        margin: 0;
+        padding-left: 25px;
+        font-size: clamp(13px, 1.29vw + 8px, 18px);
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        flex-shrink: 1;
+    }
+
+    .navActions {
+        display: flex;
+        align-items: center;
+        gap: clamp(5px, 1.3vw, 10px);
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .navIconBtn {
+        font-size: clamp(15px, 0.77vw + 12px, 18px);
+    }
+
+    .cartOverlay {
+        padding: 0;
+    }
+
+    .cartDrawer {
+        width: 85%;
+        max-width: 320px;
+        height: 100%;
+    }
+
+    .cartHeader {
+        padding: 14px 12px;
+    }
+
+    .cartHeader h5 {
+        font-size: 14px;
+    }
+
+    .cartHeader h5 span {
+        margin-left: 5px;
+        padding: 4px 6px;
+        font-size: 9px;
+    }
+
+    .cartBody {
+        padding: 6px 12px;
+    }
+
+    .cartItem {
+        gap: 8px;
+        padding: 12px 0;
+    }
+
+    .cartItem img {
+        width: 55px;
+        height: 70px;
+    }
+
+    .cartItemInfo h6 {
+        font-size: 12px;
+    }
+
+    .cartItemInfo p {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .cartItemRight strong {
+        font-size: 11px;
+    }
+
+    .quantityControls {
+        gap: 4px;
+        padding: 2px 4px;
+    }
+
+    .quantityControls button {
+        font-size: 12px;
+    }
+
+    .quantityControls span {
+        font-size: 10px;
+    }
+
+    .removeItem {
+        font-size: 10px;
+    }
+
+    .cartFooter {
+        padding: 12px;
+    }
+
+    .total {
+        font-size: 12px;
+    }
+
+    .continueShopping {
+        padding: 10px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 375px) {
+    .navbarStore {
+        height: 68px;
+    }
+
+    .navbarStore :global(.container-fluid) {
+        gap: 4px;
+    }
+
+    .menuToggle {
+        font-size: 19px;
+    }
+
+    .storeLogo {
+        padding-left: 4px;
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+
+    .navActions {
+        gap: 5px;
+    }
+
+    .navIconBtn {
+        font-size: 15px;
+    }
+}

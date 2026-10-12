@@ -1,0 +1,516 @@
+.contactPage {
+    padding: 40px 6% 20px;
+    background-color: #faf8f5;
+    color: #19191d;
+}
+
+.pageHeader {
+    text-align: center;
+    margin: 0 auto 42px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 14px;
+    color: #a6814c;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.eyebrow span {
+    width: 30px;
+    height: 1px;
+    font-weight: 500;
+    background-color: #c9af87;
+}
+
+.pageHeader h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.pageHeader p {
+    margin: 0 auto;
+    color: #67635f;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contactContainer {
+    display: grid;
+    grid-template-columns: minmax(0, 580px) minmax(0, 560px);
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 60px auto;
+}
+
+.formCard {
+    width: 100%;
+    min-height: 570px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #fffdf9;
+    border: 1px solid #f0ebe4;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(74, 55, 33, 0.05);
+}
+
+.formCard h2 {
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    border: 1px solid #e4ddd4;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.inputGroup:focus-within {
+    border-color: #b08d57;
+    box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.09);
+}
+
+.inputGroup>i {
+    flex-shrink: 0;
+    color: #393631;
+    font-size: 19px;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #282521;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+    color: #89847e;
+}
+
+.inputGroup select {
+    cursor: pointer;
+}
+
+.inputGroup select:invalid {
+    color: #89847e;
+}
+
+.messageGroup {
+    align-items: flex-start;
+    height: 200px;
+    padding-top: 8px;
+}
+
+.messageGroup textarea {
+    min-height: 110px;
+    line-height: 1.6;
+}
+
+.submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 170px;
+    padding: 10px;
+    border: none;
+    border-radius: 122px;
+    background-color: #b08d57;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #967344;
+    transform: translateY(-2px);
+}
+
+.submitBtn i {
+    font-size: 18px;
+}
+
+/* .successMessage {
+    margin: 18px 0 0;
+    color: #6d8057;
+    font-size: 14px;
+    line-height: 1.6;
+} */
+
+.imageCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent;
+}
+
+.imageCard img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 1200px) {
+    .contactPage {
+        padding: 40px 4%;
+    }
+
+    .contactContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .formCard {
+        padding: 25px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .contactPage {
+        padding: 35px 20px;
+    }
+
+    .contactContainer {
+        gap: 15px;
+    }
+
+    .pageHeader {
+        margin-bottom: 35px;
+    }
+
+    .pageHeader h1 {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+
+    .pageHeader p {
+        font-size: 14px;
+    }
+
+    .eyebrow {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .formCard {
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .formCard h2 {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+
+    .inputGroup {
+        height: 46px;
+        gap: 10px;
+        padding: 0 12px;
+        margin-bottom: 12px;
+    }
+
+    .inputGroup input,
+    .inputGroup select,
+    .inputGroup textarea {
+        font-size: 12px;
+    }
+
+    .messageGroup {
+        height: 150px;
+        padding-top: 10px;
+    }
+
+    .messageGroup textarea {
+        min-height: 100px;
+    }
+
+    .submitBtn {
+        width: 65%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactPage {
+        padding: 35px 20px;
+    }
+
+    .pageHeader {
+        margin-bottom: 30px;
+    }
+
+    .pageHeader h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .pageHeader p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .eyebrow {
+        gap: 10px;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .eyebrow span {
+        width: 22px;
+    }
+
+    .contactContainer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 30px auto;
+    }
+
+    .formCard {
+        min-height: 0;
+        padding: 25px;
+    }
+
+    .inputGroup {
+        height: 48px;
+    }
+
+    .messageGroup {
+        height: 145px;
+    }
+
+    .messageGroup textarea {
+        min-height: 100px;
+    }
+
+    .submitBtn {
+        width: 60%;
+        min-height: 40px;
+    }
+
+    .imageCard {
+        order: -1;
+        width: 100%;
+        max-width: 500px;
+        min-height:400px;
+        margin: 0 auto;
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 551px) {
+    .contactPage {
+        padding: 30px 15px;
+    }
+
+    .pageHeader {
+        margin-bottom: 25px;
+    }
+
+    .pageHeader h1 {
+        font-size: clamp(25px, 6vw, 30px);
+        letter-spacing: 1.5px;
+    }
+
+    .pageHeader p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .eyebrow {
+        gap: 8px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
+    .eyebrow span {
+        width: 18px;
+    }
+
+    .contactContainer {
+        gap: 20px;
+        width: 100%;
+    }
+
+    .formCard {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .formCard h2 {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        margin-bottom: 16px;
+    }
+
+    .inputGroup {
+        height: 44px;
+        gap: 9px;
+        padding: 0 10px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    .inputGroup>i {
+        font-size: 15px;
+    }
+
+    .inputGroup input,
+    .inputGroup select,
+    .inputGroup textarea {
+        font-size: 12px;
+    }
+
+    .messageGroup {
+        height: 130px;
+        padding-top: 10px;
+    }
+
+    .messageGroup textarea {
+        min-height: 95px;
+        line-height: 1.5;
+    }
+
+    .submitBtn {
+        width: 75%;
+        min-height: 38px;
+        padding: 10px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .submitBtn i {
+        font-size: 15px;
+    }
+
+    .imageCard {
+        height: 220px;
+        border-radius: 12px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .contactPage {
+        padding: 25px 10px;
+    }
+
+    .pageHeader {
+        margin-bottom: 20px;
+    }
+
+    .pageHeader h1 {
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+
+    .pageHeader p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .eyebrow {
+        gap: 6px;
+        font-size: 9px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .eyebrow span {
+        width: 15px;
+    }
+
+    .contactContainer {
+        gap: 15px;
+    }
+
+    .formCard {
+        padding: 16px 10px;
+        border-radius: 9px;
+    }
+
+    .formCard h2 {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+    }
+
+    .inputGroup {
+        height: 40px;
+        gap: 7px;
+        padding: 0 8px;
+        margin-bottom: 10px;
+        border-radius: 7px;
+    }
+
+    .inputGroup>i {
+        font-size: 14px;
+    }
+
+    .inputGroup input,
+    .inputGroup select,
+    .inputGroup textarea {
+        font-size: 11px;
+    }
+
+    .messageGroup {
+        height: 115px;
+        padding-top: 8px;
+    }
+
+    .messageGroup textarea {
+        min-height: 85px;
+        font-size: 11px;
+    }
+
+    .submitBtn {
+        width: 85%;
+        min-height: 35px;
+        padding: 8px;
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .submitBtn i {
+        font-size: 13px;
+    }
+
+    .imageCard {
+        height: 190px;
+        border-radius: 10px;
+    }
+}
