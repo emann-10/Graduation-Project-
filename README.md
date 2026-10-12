@@ -1,5 +1,4 @@
 # ÉLORA Store
-
 ## Overview
 ÉLORA is a modern luxury perfume e-commerce web application built with React. It provides a clean, responsive interface for browsing fragrances, managing a shopping cart, and contacting the store. The application demonstrates best practices in React development, including component structure, routing, global state management, and responsive design.
 
@@ -106,7 +105,7 @@ The build artifacts will be stored in the `dist/` directory.
 ```
 
 ## Live Demo
-[View the live site](https://your-project.vercel.app)
+[View the live site](https://graduation-project-seven-alpha.vercel.app/)
 
 ## License
 MIT
