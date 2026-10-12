@@ -117,7 +117,6 @@
     color: #fff;
 }
 
-/* Large Tablets & Small Laptops */
 @media (max-width: 1200px) {
     .bestSellers {
         padding: 60px 25px;
@@ -147,8 +146,6 @@
         font-size: 15px;
     }
 }
-
-/* Tablets */
 @media (max-width: 992px) {
     .bestSellers {
         padding: 55px 20px;
@@ -199,7 +196,6 @@
     }
 }
 
-/* Small Tablets */
 @media (max-width: 768px) {
     .bestSellers {
         padding: 45px 15px;
@@ -261,7 +257,6 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 551px) {
     .bestSellers {
         padding: 35px 12px;
@@ -335,8 +330,6 @@
         border-radius: 8px;
     }
 }
-
-/* Small Mobile */
 @media (max-width: 375px) {
     .bestSellers {
         padding: 30px 10px;
